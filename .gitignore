@@ -1,0 +1,11 @@
+_build/
+*.o
+*.a
+*.exe
+*.dll
+*.dat
+*.frd
+*.sta
+*.cvg
+*.log
+__pycache__/

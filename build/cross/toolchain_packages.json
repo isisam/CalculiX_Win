@@ -1,0 +1,44 @@
+[
+  {
+    "Package": "gcc-mingw-w64-x86-64-posix",
+    "Version": "13.2.0-6ubuntu1+26.1",
+    "Filename": "pool/universe/g/gcc-mingw-w64/gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_amd64.deb",
+    "SHA256": "0855fa1d4a618550faac3a3e4352aa3226833b28184ad3c3b496a68a22c4eda2"
+  },
+  {
+    "Package": "gfortran-mingw-w64-x86-64-posix",
+    "Version": "13.2.0-6ubuntu1+26.1",
+    "Filename": "pool/universe/g/gcc-mingw-w64/gfortran-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_amd64.deb",
+    "SHA256": "48c60604c417d7d06de48655d172e3503a0b4ec7ac5000c89d449f38518922ef"
+  },
+  {
+    "Package": "gcc-mingw-w64-x86-64-posix-runtime",
+    "Version": "13.2.0-6ubuntu1+26.1",
+    "Filename": "pool/universe/g/gcc-mingw-w64/gcc-mingw-w64-x86-64-posix-runtime_13.2.0-6ubuntu1+26.1_amd64.deb",
+    "SHA256": "aca6b438e0b55b11cedcf1170a1ee26e7979e34192e34f6e6389e560908a5bfc"
+  },
+  {
+    "Package": "gcc-mingw-w64-base",
+    "Version": "13.2.0-6ubuntu1+26.1",
+    "Filename": "pool/universe/g/gcc-mingw-w64/gcc-mingw-w64-base_13.2.0-6ubuntu1+26.1_amd64.deb",
+    "SHA256": "a30c07e807e9874ea93909448c5d6d37f9569ebe60ad32de8e490aad198538a3"
+  },
+  {
+    "Package": "mingw-w64-common",
+    "Version": "11.0.1-3build1",
+    "Filename": "pool/universe/m/mingw-w64/mingw-w64-common_11.0.1-3build1_all.deb",
+    "SHA256": "4a42fd30fbc3838c58c929d8a4882682fc12408bb7a0e6cafa913c0f0a57c187"
+  },
+  {
+    "Package": "mingw-w64-x86-64-dev",
+    "Version": "11.0.1-3build1",
+    "Filename": "pool/universe/m/mingw-w64/mingw-w64-x86-64-dev_11.0.1-3build1_all.deb",
+    "SHA256": "018480a62907fcca19c6bf2975ae01f5c92c23dee8c3cf7a8355c10bf7d42c6f"
+  },
+  {
+    "Package": "binutils-mingw-w64-x86-64",
+    "Version": "2.41.90.20240122-1ubuntu1+11.4",
+    "Filename": "pool/universe/b/binutils-mingw-w64/binutils-mingw-w64-x86-64_2.41.90.20240122-1ubuntu1+11.4_amd64.deb",
+    "SHA256": "28bfabbf64a68813a56360bca056072af9ff71ef4090a4b8a8a085afcda3e4dd"
+  }
+]

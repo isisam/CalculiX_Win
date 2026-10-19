@@ -1,0 +1,31 @@
+2024-04-02  Simon Chopin  <simon.chopin@canonical.com>
+	    Jakub Jelinek  <jakub@redhat.com>
+
+	PR libquadmath/114533
+	* printf_fp.c (__quadmath_printf_fp): Use memcpy to copy __float128
+	out of args.
+	* printf_fphex.c (__quadmath_printf_fphex): Likewise.
+
+--- a/src/libquadmath/printf/printf_fp.c
++++ b/src/libquadmath/printf/printf_fp.c
+@@ -363,7 +363,7 @@ __quadmath_printf_fp (struct __quadmath_
+ 
+   /* Fetch the argument value.	*/
+     {
+-      fpnum = **(const __float128 **) args[0];
++      memcpy (&fpnum, *(const void *const *) args[0], sizeof (fpnum));
+ 
+       /* Check for special values: not a number or infinity.  */
+       if (isnanq (fpnum))
+--- a/src/libquadmath/printf/printf_fphex.c
++++ b/src/libquadmath/printf/printf_fphex.c
+@@ -163,7 +163,8 @@ __quadmath_printf_fphex (struct __quadma
+ 
+   /* Fetch the argument value.	*/
+     {
+-      fpnum.value = **(const __float128 **) args[0];
++      memcpy (&fpnum.value, *(const void *const *) args[0],
++	      sizeof (fpnum.value));
+ 
+       /* Check for special values: not a number or infinity.  */
+       if (isnanq (fpnum.value))
