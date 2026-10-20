@@ -1,5 +1,7 @@
 # CalculiX_Win — stock CalculiX 2.21 for Windows
 
+Public author and maintainer of this fork's additions: **Isisam**. Original upstream authors and notices are retained.
+
 公開教學用 Windows x64 求解器，採用原版 CalculiX 2.21。這是非官方發行，授權 GPL-2.0-or-later。
 Download ccx.exe from [Releases](https://github.com/isisam/CalculiX_Win/releases), unpack to a writable folder and run `ccx.exe -i job` next to job.inp.
 
