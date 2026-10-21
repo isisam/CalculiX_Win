@@ -1,6 +1,6 @@
 # CalculiX_Win features
 
-Version: 2.21-win64.2. Author: S.Y. Su. Original upstream credits and licences are retained.
+Version: 2.21-win64.3. Author: S.Y. Su. Original upstream credits and licences are retained.
 
 ## What it does
 
@@ -8,7 +8,7 @@ Runs finite element analyses supported by stock CalculiX 2.21, including static,
 
 ## Differences from upstream
 
-Uses the exact ccx.exe from v2.21-win64.1; the numerical core is unchanged. Adds a per-user installer, user PATH integration, Start menu help and an uninstaller.
+Uses stock CalculiX 2.21 with a fix for a 64-bit index overflow in SPOOLES that could stop large-mesh jobs. Adds a per-user installer, user PATH integration, Start menu help and an uninstaller.
 
 ## Limitations
 
@@ -34,3 +34,5 @@ Use Windows Settings → Apps → Installed apps, or run `Uninstall.exe` in the 
 ## SmartScreen: unknown publisher
 
 The installer is unsigned. Verify the GitHub release source and SHA256SUMS. If SmartScreen appears, choose More info → Run anyway. If school policy blocks execution, contact school IT. Do not disable antivirus or change security settings.
+
+Recommended for all users: fixes a possible solver stop on large meshes. Close the application and solver, then install over the same folder; no prior uninstall is needed. Tested from the previous student installer.

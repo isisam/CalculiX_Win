@@ -1,0 +1,64 @@
+--- a/I2Ohash/src/util.c
++++ b/I2Ohash/src/util.c
+@@ -20,7 +20,7 @@
+    void      *value 
+ ) {
+ int   loc, loc1, loc2 ;
+-long int loc3 ;
++long long loc3 ;
+ I2OP  *i2op, *j2op, *prev ;
+ 
+ if ( hashtable == NULL ) {
+@@ -40,10 +40,10 @@
+ */
+ loc1 = (key1 + 1) % hashtable->nlist ;
+ loc2 = (key2 + 1) % hashtable->nlist ;
+-loc3  = (long int)loc1*(long int)loc2 % hashtable->nlist ;
++loc3  = (long long)loc1 * loc2 % hashtable->nlist ;
+ loc =(int) loc3;
+ #if MYDEBUG > 0
+-fprintf(stdout, "\n loc1 = %d, loc2 = %d, loc3 = %ld, loc = %d", loc1, loc2, loc3, loc) ;
++fprintf(stdout, "\n loc1 = %d, loc2 = %d, loc3 = %lld, loc = %d", loc1, loc2, loc3, loc) ;
+ fflush(stdout) ;
+ #endif
+ /*
+@@ -141,7 +141,7 @@
+    void      **pvalue 
+ ) {
+ int   loc, loc1, loc2, rc ;
+-long int loc3 ;
++long long loc3 ;
+ I2OP   *i2op ;
+ /*
+    ---------------
+@@ -161,10 +161,10 @@
+ #endif
+ loc1 = (key1 + 1) % hashtable->nlist ;
+ loc2 = (key2 + 1) % hashtable->nlist ;
+-loc3  = (long int)loc1*(long int)loc2 % hashtable->nlist ;
++loc3  = (long long)loc1 * loc2 % hashtable->nlist ;
+ loc  = (int) loc3 ;
+ #if MYDEBUG > 0
+-fprintf(stdout, "\n loc1 = %d, loc2 = %d, loc3 = %ld, loc = %d", loc1, loc2, loc3, loc) ;
++fprintf(stdout, "\n loc1 = %d, loc2 = %d, loc3 = %lld, loc = %d", loc1, loc2, loc3, loc) ;
+ fflush(stdout) ;
+ #endif
+ /*
+@@ -219,7 +219,7 @@
+    void      **pvalue 
+ ) {
+ int   loc, loc1, loc2, rc ;
+-long int loc3 ;
++long long loc3 ;
+ I2OP   *i2op, *prev ;
+ /*
+    ---------------
+@@ -234,7 +234,7 @@
+ }
+ loc1 = (key1 + 1) % hashtable->nlist ;
+ loc2 = (key2 + 1) % hashtable->nlist ;
+-loc3  = (long int)loc1*(long int)loc2 % hashtable->nlist ;
++loc3  = (long long)loc1 * loc2 % hashtable->nlist ;
+ loc  = (int) loc3 ;
+ /*
+    ---------------------------------------------------

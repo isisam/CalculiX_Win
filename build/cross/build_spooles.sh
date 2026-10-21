@@ -7,6 +7,17 @@ set -euo pipefail
 W=${W:?set W to the build root, see README_SOURCE.md}
 . "$W/scripts/prefix_map.sh"
 S=$W/src/spooles/spooles-2.2
+# Windows LLP64: multiply I2Ohash indices as long long (2026-10-21).
+python3 - "$S/I2Ohash/src/util.c" <<'PY'
+from pathlib import Path
+import sys
+p=Path(sys.argv[1]);s=p.read_text()
+old='loc3  = (long int)loc1*(long int)loc2 % hashtable->nlist ;'
+new='loc3  = (long long)loc1 * loc2 % hashtable->nlist ;'
+assert s.count(old)==3 or s.count(new)==3
+s=s.replace(old,new).replace('long int loc3 ;','long long loc3 ;').replace('loc3 = %ld','loc3 = %lld')
+p.write_text(s)
+PY
 B=$W/build/spooles; [ ! -e "$B" ] || exit 88; mkdir -p $B
 CC=x86_64-w64-mingw32-gcc-posix; AR=x86_64-w64-mingw32-ar
 CFLAGS="-O2 -fcommon -std=gnu99 -D_POSIX_C_SOURCE=199506L -w $PMAP_C"

@@ -1,21 +1,13 @@
-# CalculiX_Win — Windows 學生一鍵安裝包
+# CalculiX_Win — Windows 學生安裝包
 
-作者 / Author: **S.Y. Su**. 原始上游作者及授權聲明保留。
+作者：S.Y. Su <isisam@users.noreply.github.com>。保留上游作者及授權。
 
-## 下載與安裝 / Download and install
+[下載 CalculiX_Win_Setup_2.21.exe](https://github.com/isisam/CalculiX_Win/releases/download/v2.21-win64.3/CalculiX_Win_Setup_2.21.exe) → 關閉程式與求解器 → 安裝。
 
-**[下載 CalculiX_Win_Setup_2.21.exe](https://github.com/isisam/CalculiX_Win/releases/download/v2.21-win64.2/CalculiX_Win_Setup_2.21.exe) → 雙擊 → 完成**
+修正大網格時求解器可能中途停止的問題，建議所有人更新。舊版不用先解除安裝，選擇原資料夾直接覆蓋安裝即可，已實測確認。
 
-Download Setup.exe → double-click → Finish. Per-user installation; no administrator rights required.
+stock CalculiX 2.21 加上 SPOOLES I2Ohash 64 位元索引運算修正。安裝於目前使用者帳號，加入使用者 PATH。
 
-公開版 stock CalculiX 2.21，與 v2.21-win64.1 的 ccx.exe 位元組完全相同。新增目前使用者的 PATH 與解除安裝程式，不改系統 PATH。此包只有命令列求解器。
+[更新說明](RELEASE_NOTES_STUDENT.md) · [功能與安裝](docs/student/INSTALL_一鍵安裝.md) · [English features](docs/student/FEATURES_en.md)
 
-- [繁中功能說明](docs/student/FEATURES_zh-TW.md)
-- [English features](docs/student/FEATURES_en.md)
-- [一頁安裝說明與截圖](docs/student/INSTALL_一鍵安裝.md)
-
-安裝程式未簽章。先核對 release 的 SHA256SUMS；若 SmartScreen 顯示「未知發行者」，按「其他資訊 → 仍要執行」。學校政策若禁止執行，請聯絡 IT。
-
-解除安裝可用 Windows 設定的應用程式清單，或安裝資料夾的 Uninstall.exe。支援 /S 靜默安裝及解除安裝。請把修改過的範例另存到工作資料夾。
-
-[Build and provenance](build/BUILD.md) · [Stock examples](examples/README.md) · [Credits](NOTICE.md) · [License](LICENSE)
+安裝包未簽章，請比對 release 的 SHA256SUMS。求解器來源、第三方授權及可重新連結物件隨 release 提供。支援 /S 靜默安裝與解除安裝。

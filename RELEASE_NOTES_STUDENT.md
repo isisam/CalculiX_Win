@@ -1,15 +1,13 @@
-# CalculiX_Win v2.21-win64.2
+# CalculiX_Win v2.21-win64.3
 
-作者 / Author: S.Y. Su. Upstream credits and licences retained.
+作者：S.Y. Su <isisam@users.noreply.github.com>。保留原始上游作者與授權聲明。
 
-下載 `CalculiX_Win_Setup_2.21.exe` → 雙擊 → 完成。Download Setup.exe → double-click → Finish.
+修正大網格時求解器可能中途停止的問題，**建議所有人更新**。
 
-- ccx.exe 與 v2.21-win64.1 完全相同，數值核心沒有變更。
-- 新增每位使用者的 NSIS 安裝程式，只修改使用者 PATH；解除安裝保留原有 PATH。
-- 附公開版彈簧及樑範例、雙語功能說明與解除安裝程式。
+下載 `CalculiX_Win_Setup_2.21.exe`，先關閉正在使用的程式與求解器，再執行安裝。**舊版不用先解除安裝，直接選擇原安裝資料夾覆蓋安裝即可。** 已在 Windows 實測由上一版學生安裝包直接更新；使用者 PATH 沒有重複，另存的測試檔也有保留。不需管理員權限。自訂過安裝位置的同學，請選擇原來的位置。
 
-- 支援 /S 靜默安裝與解除安裝。
-- 未簽章，SmartScreen 可能顯示未知發行者；先核對 SHA256SUMS，再按「其他資訊 → 仍要執行」。
-- 對應源碼與第三方授權隨 release 提供。教學範例不等於工程認證。
+本次更新的是 stock CalculiX 2.21 的 SPOOLES 求解器，修正大網格索引運算超出範圍的問題。內附彈簧與樑範例。安裝包未簽章，下載後可先用 SHA256SUMS 核對檔案。
 
-驗證摘要及掃描結果見 verification.json。完整 Kappa 證據保留於本次 review。
+驗證：全新靜默安裝、上一版直接覆蓋安裝、三個範例數值比對、解除安裝與隱私掃描均通過；安裝後的修正版也完成 311,448 節點、934,285 個方程式的大網格案例。詳細結果見 verification.json。
+
+求解器對應來源與可重新連結的物件檔：`CalculiX-2.21-SPOOLES-win64.3-source.zip`。原始上游與第三方授權均保留。請把自己的模型與計算結果放在工作資料夾。
